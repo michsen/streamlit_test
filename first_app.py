@@ -1,6 +1,6 @@
 import streamlit as st
-#import pandas as pd
-#import numpy as np
+import pandas as pd
+import numpy as np
 import time
 #import plotly.express as px
 
@@ -8,6 +8,16 @@ st.title('Hallo Tabs!')
 
 text = 'Wie geht es dir?'
 text
+
+text = 'Ich zeige dir jetzt wo du wohnst.'
+text
+
+map_data = pd.DataFrame(
+    {'lat':[51.47160735536923],
+    'lon':[7.2545561139305805]}
+)
+
+st.map(map_data, zoom=13)
 
 
 # Import City-Dataframe
